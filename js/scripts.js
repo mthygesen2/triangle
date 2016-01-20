@@ -9,7 +9,20 @@ var triangle = function(side1, side2, side3) {
            ((side2 === side3) && (side2 !== side1)) ||
            ((side3 === side1) && (side3 !== side2)) ) {
     return "isosceles";
-  } else if((side1 !== side2) && (side2 !== side3) && (side3 !== side1)) {
+  } else {
     return "scalene";
   }
 };
+
+$(document).ready(function(){
+  //get the input
+  $("#triangleForm").submit(function(event) {
+    var side1 = parseInt($("#side1").val());
+    var side2 = parseInt($("#side2").val());
+    var side3 = parseInt($("#side3").val());
+    $(".output").text(triangle(side1, side2, side3));
+    event.preventDefault();
+  });
+  //put input  into the triangle calculator
+
+});
