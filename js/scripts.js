@@ -15,7 +15,6 @@ var triangle = function(side1, side2, side3) {
 };
 
 $(document).ready(function(){
-  //get the input
   $("#triangleForm").submit(function(event) {
     var side1 = parseInt($("#side1").val());
     var side2 = parseInt($("#side2").val());
@@ -23,6 +22,4 @@ $(document).ready(function(){
     $(".output").text(triangle(side1, side2, side3));
     event.preventDefault();
   });
-  //put input  into the triangle calculator
-
 });
